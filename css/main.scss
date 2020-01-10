@@ -1,14 +1,17 @@
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
 /* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 html {
   color: #222;
   font-family: 'Montserrat', sans-serif;
@@ -25,6 +28,7 @@ html {
  *
  * Customize the background color to match your design.
  */
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -38,6 +42,7 @@ html {
 /*
  * A better looking default horizontal rule
  */
+
 hr {
   display: block;
   height: 1px;
@@ -52,6 +57,7 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
+
 audio,
 canvas,
 iframe,
@@ -64,6 +70,7 @@ video {
 /*
  * Remove default fieldset styles.
  */
+
 fieldset {
   border: 0;
   margin: 0;
@@ -73,6 +80,7 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
+
 textarea {
   resize: vertical;
 }
@@ -80,6 +88,7 @@ textarea {
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -95,23 +104,16 @@ textarea {
   --brand-red: #c3002f;
   --brand-yellow: #ffd13f;
 }
-
 .header-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   top: 0;
 }
-
 .brand {
   background-color: var(--brand-bg);
   font-weight: bolder;
   padding: 1vw;
 }
-
 .brand-title-red {
   color: var(--brand-red);
 }
@@ -125,28 +127,16 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #222;
   color: white;
   opacity: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
   z-index: 100;
 }
-
-.nav-item {
-  padding: 4% 10%;
-}
-
-.nav-item:hover {
-  color: #555;
-}
+.nav-item { padding: 4% 10%;}
+.nav-item:hover { color: #555; }
 
 /* footer */
 footer {
@@ -157,28 +147,30 @@ footer {
   font-size: .8rem;
 }
 
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 /*
  * Hide visually and from screen readers
  */
-.wrapper-gradient {
-  background: rgba(0, 0, 0, 0);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(33%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.53)));
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(33%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.53)));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.53) 100%);
+ .wrapper-gradient {
+  background: rgba(0,0,0,0);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 33%, rgba(0,0,0,0.53) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(33%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.53)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 33%, rgba(0,0,0,0.53) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 33%, rgba(0,0,0,0.53) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 33%, rgba(0,0,0,0.53) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 33%, rgba(0,0,0,0.53) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
 }
-
 .shadow {
-  -webkit-box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 5px 1px rgba(0,0,0,.1);
 }
-
-.image-background {
-  width: 100%;
-}
+ .image-background {
+   width: 100%;
+ }
 
 .hidden {
   display: none !important;
@@ -192,6 +184,7 @@ footer {
 *    causes content to wrap 1 word per line:
 *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
 */
+
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -210,6 +203,7 @@ footer {
 * to be focusable when navigated to via the keyboard:
 * https://www.drupal.org/node/897638
 */
+
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -224,6 +218,7 @@ footer {
 /*
 * Hide visually and from screen readers, but maintain layout
 */
+
 .invisible {
   visibility: hidden;
 }
@@ -239,6 +234,7 @@ footer {
 * 2. The use of `table` rather than `block` is only necessary if using
 *    `:before` to contain the top-margins of child elements.
 */
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -256,46 +252,28 @@ footer {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
   .nav-container {
     left: initial;
     right: 30px;
     width: 80%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
     background-color: transparent;
     color: black;
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   .nav-item {
     padding: 2% 2%;
     font-size: 1.4rem;
   }
-  .closebtn {
-    display: none;
-  }
-  .openbtn {
-    display: none;
-  }
-  .home-main {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    font-size: 1.3rem;
-  }
-  .home-main-overlay {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
+  .closebtn {display: none}
+  .openbtn {display: none}
+  .home-main { align-self: center; font-size: 1.3rem; }
+  .home-main-overlay { align-self: center;}
   .start-journey-btn {
     width: auto;
     padding: 2vh;
@@ -306,7 +284,10 @@ footer {
   }
 }
 
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -315,6 +296,7 @@ footer {
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
+
 @media print {
   *,
   *:before,
@@ -322,8 +304,7 @@ footer {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+    box-shadow: none !important;
     text-shadow: none !important;
   }
   a,
@@ -374,4 +355,3 @@ footer {
     page-break-after: avoid;
   }
 }
-/*# sourceMappingURL=main.css.map */
