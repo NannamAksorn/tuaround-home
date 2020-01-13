@@ -1,0 +1,58 @@
+/* --------------------   HOME SECTION   ----------------------------------- */
+.who-section {
+  padding: 2em;
+}
+
+.meet-our-team-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  text-align: left;
+  border-radius: 2em;
+  width: 15em;
+  margin: .8em;
+  padding: 2em .8em;
+  h2 { font-size: 1.2rem; letter-spacing: .2em; line-height: .1em; }
+  p { font-size: .8rem; line-height: .01rem; letter-spacing: .1em;}
+  q { font-size: .7rem; line-height: 1rem; letter-spacing: .2em; }
+}
+.am { background: #fef; }
+.nam { background: #eef; }
+.tony { background: #efe; }
+
+.team-card--img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+[data-scroll] {
+  transition: all  .8s;
+}
+[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0)
+}
+[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(-100%)
+}
+
+@media only screen and (min-width: 35em)  {
+ .meet-our-team-section {
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .meet-our-team-title {
+   width: 100%;
+
+ }
+}

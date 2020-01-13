@@ -141,11 +141,15 @@ textarea {
 }
 
 .nav-item {
-  padding: 4% 10%;
+  padding: 1em 2em;
 }
 
 .nav-item:hover {
   color: #555;
+}
+
+.nav-active {
+  border-bottom: .1em solid #555;
 }
 
 /* footer */
@@ -276,8 +280,8 @@ footer {
             transform: translateY(0);
   }
   .nav-item {
-    padding: 2% 2%;
-    font-size: 1.4rem;
+    padding: .8em .8em;
+    font-size: 1.1rem;
   }
   .closebtn {
     display: none;
