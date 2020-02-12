@@ -4,14 +4,16 @@ header_nav.innerHTML = `
   <a href="/" class="brand">
     <span class="brand-title-red">TU</span> <span class="brand-title-yellow">AROUND</span>
   </a>
-  <div class="nav-container" id="navbar">
-    <a class="nav-item  closebtn" href="javascrip:vold(0)" onclick="closeNav()">&times;</a>
-    <a class="nav-item ${pathname == '/' ? 'nav-active': ''}" href="/">Home</a>
-    <a class="nav-item" href="/about">About</a>
-    <a class="nav-item" href="/article">Article</a>
-    <a class="nav-item" href="/faq">FAQ</a>
-    <a class="nav-item" href="/contact">Contact</a>
-  </div>
+  <nav class="nav-container nav-shift" id="navbar">
+    <ul>
+    <li><a class="nav-item  closebtn" href="javascrip:vold(0)" onclick="closeNav()">&times;</a></li>
+    <li><a class="nav-item ${pathname == '/' ? 'nav-active': ''}" href="/">Home</a></li>
+    <li><a class="nav-item" href="/about">About</a></li>
+    <li><a class="nav-item" href="/article">Article</a></li>
+    <li><a class="nav-item" href="/faq">FAQ</a></li>
+    <li><a class="nav-item" href="/contact">Contact</a></li>
+    </ul>
+  </nav>
   <button class="openbtn" onclick="openNav()">&#9776;</button>
 `
 
