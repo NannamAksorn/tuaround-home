@@ -1,9 +1,9 @@
-const nav = document.getElementById("nav");
+const header_nav = document.getElementById("nav");
 const pathname = window.location.pathname.replace('.html', '')
-nav.innerHTML = `
-  <div class="brand">
+header_nav.innerHTML = `
+  <a href="/" class="brand">
     <span class="brand-title-red">TU</span> <span class="brand-title-yellow">AROUND</span>
-  </div>
+  </a>
   <div class="nav-container" id="navbar">
     <a class="nav-item  closebtn" href="javascrip:vold(0)" onclick="closeNav()">&times;</a>
     <a class="nav-item ${pathname == '/' ? 'nav-active': ''}" href="/">Home</a>
